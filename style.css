@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  background-color: #0A192F;
+  overflow-x: hidden;
+
+}
+
+::selection {
+  color: black;
+  background-color: #64FFDA;
+}
+
+.selection {
+  color: black;
+  background-color: #64ffdbc3;
+}
+
+
+/* ---------- NavBar ---------- */
+
+header {
+  background-color: #0A192F;
+  border-bottom: 2px solid #64FFDA;
+}
+
+.navbar {
+  min-height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 150px;
+  font-family: 'Fira Code', monospace;
+
+}
+
+.navbar-logo {
+  font-size: 30px;
+  color: #64FFDA;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 80px;
+}
+
+
+.navbar-color {
+  color: #64FFDA;
+}
+
+.navbar-link {
+  color: #FFFFFF;
+  font-size: 13px;
+  line-height: 25px;
+}
+
+
+
+/* ---------- Navbar Responsivo ---------- */
+
+
+
+@media (max-width: 930PX) {
+
+
+  .navbar-menu {
+    position: fixed;
+    left: -100%;
+    top: 50px;
+    gap: 0;
+    border-bottom: 2px solid #64FFDA;
+    background-color: #0A192F;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    transition: all 0.5s;
+    z-index: 1000;
+  }
+
+
+
+}
+
+
+
+/* ---------- Main  ---------- */
+
+
+
+.main-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-text {
+  max-width: 600px;
+  margin-left: 150px;
+  margin-top: 35px;
+}
+
+.main-text p:first-child {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: #64FFDA;
+  line-height: 21px;
+  padding-bottom: 10px;
+}
+
+.main-text p:nth-last-child(2) {
+  font-size: 25px;
+  color: #FFFFFF;
+}
+
+.main-title1 {
+  font-size: 60px;
+  color: #CCD6F6;
+}
+
+.main-title2 {
+  font-size: 60px;
+  color: #8892C0;
+  padding-bottom: 20px;
+}
+
+.btn-curriculo {
+  position: relative;
+  padding: 20px 50px;
+  display: block;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 40px;
+  margin-top: 35px;
+  text-align: center;
+
+}
+
+.btn-span {
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+  background: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.btn-liquid {
+
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #55c9ae;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 0.8s;
+
+}
+
+.btn-liquid::after,
+.btn-liquid::before {
+  content: '';
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #0066ff;
+}
+
+.btn-liquid::before {
+  border-radius: 45%;
+  background: rgba(10, 25, 47, .1);
+  animation: animate 5s linear infinite;
+}
+
+.btn-liquid::after {
+  border-radius: 45%;
+  background: rgba(10, 25, 47, .5);
+  animation: animate 10s linear infinite;
+
+}
+
+.btn-curriculo:hover .btn-liquid {
+  top: -120px;
+
+}
+
+@keyframes animate {
+
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+
+
+@media (max-width: 768PX) {
+  .main-container {
+    margin: 0 auto;
+  }
+
+  .main-text {
+    transition: all .2;
+    max-width: 600px;
+    margin: 90px 20px;
+  }
+}
+
+
+/* ---------- Section About  ---------- */
+
+
+.about {
+  width: 100%;
+  align-items: center;
+  margin-top: 90px;
+  color: #FFFFFF;
+  margin-left: 150px;
+  margin-top: 90px;
+  margin-bottom: 100px;
+}
+
+.about-title {
+  color: #FFFFFF;
+  position: relative;
+  font-size: 30px;
+}
+
+.about-title span {
+  padding-right: 15px;
+}
+
+.about-title img {
+  position: absolute;
+  top: 20px;
+  left: 170px;
+}
+
+.about-title span {
+  color: #64FFDA;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  margin-top: 50px;
+}
+
+.about-text {
+  font-size: 20px;
+  max-width: 674px;
+  line-height: 26.24px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+}
+
+
+.about-image img {
+  position: relative;
+  width: 365px;
+  height: 406px;
+  border-radius: 5px;
+}
+
+
+
+@media (max-width: 768PX) {
+  .about {
+    margin: 90px 20px;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .about-text {
+    transition: all .2;
+    max-width: 600px;
+  }
+
+  .about-text p {
+    transition: all .2;
+    max-width: 350px;
+
+  }
+}
